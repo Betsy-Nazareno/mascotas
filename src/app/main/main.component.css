@@ -1,0 +1,31 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url("https://myanimals.com/es/wp-content/uploads/2019/04/mascota-adecuada.jpg");
+  background-size: cover;
+}
+
+.center {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.top {
+  margin-top: 3vh;
+}
+
+.following {
+  margin-top: 2vh;
+}
+
+.example-card {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}

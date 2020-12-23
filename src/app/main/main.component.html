@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+	<span>Mis mascotas</span>
+	<span class="example-spacer"></span>
+	<mat-icon aria-hidden="false" aria-label="Example home icon">favorite</mat-icon>
+</mat-toolbar>
+
+<div class="center top">
+	<mat-form-field appearance="fill">
+		<mat-label>Mascota</mat-label>
+		<mat-select [formControl]="mascotas">
+			<mat-option (onSelectionChange)="change($event)" *ngFor="let mascota of mascotasLista" [value]="mascota">
+				{{mascota.nombre}}</mat-option>
+		</mat-select>
+	</mat-form-field>
+</div>
+
+<div class="center following">
+	<mat-card class="example-card">
+		<mat-card-header>
+			<div mat-card-avatar class="example-header-image"></div>
+			<mat-card-title>{{mascota.nombre}}</mat-card-title>
+			<mat-card-subtitle>{{mascota.raza}}</mat-card-subtitle>
+		</mat-card-header>
+		<img
+      mat-card-image
+      src="{{mascota.url}}"
+      alt="Photo of a Shiba Inu"
+    />
+		<mat-card-content>
+			<p>
+				{{mascota.descripcion}}
+			</p>
+		</mat-card-content>
+	</mat-card>
+</div>
